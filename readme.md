@@ -4,7 +4,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-blue.svg)](https://postgresql.org)
 [![Status](https://img.shields.io/badge/Project-Final%20Training-green.svg)]()
 
----
+--- 
 
 ## 📋 À propos du projet
 
