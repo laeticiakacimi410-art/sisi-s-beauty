@@ -1,0 +1,1564 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    background: #FFFFFF;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+h1, h2, h3, .logo {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #c4a4a4;
+    margin: 15px auto 0;
+}
+
+
+header {
+    background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.logo .pink {
+    color: #c4a4a4;
+}
+
+.logo .black {
+    color: #1a1a1a;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #c4a4a4;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-reserver {
+    background: #1a1a1a;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-reserver:hover {
+    background: #c4a4a4;
+}
+
+.btn-connexion {
+    background: transparent;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: color 0.3s;
+}
+
+.btn-connexion:hover {
+    color: #c4a4a4;
+}
+
+.user-welcome {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #1a1a1a;
+    margin-right: 10px;
+}
+
+
+.hero {
+    margin-top: 80px;
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    background: url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a0b9?w=1600&h=900&fit=crop') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.hero-female {
+    background: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1600&h=900&fit=crop') center/cover no-repeat;
+}
+
+
+.hero-salon {
+    background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&h=900&fit=crop') center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 35px;
+}
+
+.hero-content .btn-hero {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.hero-content .btn-hero:hover {
+    background: white;
+    color: #1a1a1a;
+}
+
+
+.services {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: #FDF9F7;
+    transition: all 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.service-card p {
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.service-price {
+    color: #c4a4a4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+.testimonials {
+    padding: 100px 0;
+    background: #FDF9F7;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 35px;
+    border-left: 3px solid #c4a4a4;
+    transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.testimonial-stars {
+    color: #c4a4a4;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #c4a4a4;
+}
+
+.testimonial-badge {
+    display: inline-block;
+    background: #c4a4a4;
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+
+.cta {
+    padding: 80px 0;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.cta h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    letter-spacing: 0.05em;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-cta-primary {
+    background: #c4a4a4;
+    color: #1a1a1a;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-cta-primary:hover {
+    background: white;
+}
+
+.btn-cta-outline {
+    background: transparent;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: 1px solid white;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-cta-outline:hover {
+    background: white;
+    color: #1a1a1a;
+}
+
+
+footer {
+    background: #1a1a1a;
+    color: #999;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.footer-col p, .footer-col ul {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #c4a4a4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.connexion-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FDF9F7;
+    padding: 100px 0;
+}
+
+.connexion-card {
+    background: white;
+    max-width: 480px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 45px 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border: 1px solid #EBE5E2;
+}
+
+.connexion-card h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.connexion-card h2::after {
+    display: none;
+}
+
+.connexion-subtitle {
+    text-align: center;
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+
+.connexion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 14px 16px;
+    border: 1px solid #EBE5E2;
+    background: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #c4a4a4;
+    box-shadow: 0 0 0 2px rgba(196,164,164,0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.btn-connexion-submit {
+    background: #1a1a1a;
+    color: white;
+    padding: 14px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-connexion-submit:hover {
+    background: #c4a4a4;
+}
+
+.message-error {
+    background: #f8e8e8;
+    color: #b5838d;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 25px;
+    border-left: 3px solid #b5838d;
+}
+
+.message-success {
+    background: #e8f0e8;
+    color: #6b8c6b;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 25px;
+    border-left: 3px solid #6b8c6b;
+}
+
+.connexion-links {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #EBE5E2;
+}
+
+.connexion-links a {
+    color: #c4a4a4;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+}
+
+.connexion-links a:hover {
+    color: #1a1a1a;
+}
+
+.inscription-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #EBE5E2;
+}
+
+.inscription-link p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.inscription-link a {
+    color: #c4a4a4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.inscription-link a:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.test-credentials {
+    margin-top: 20px;
+    background: #FDF9F7;
+    padding: 15px;
+    text-align: center;
+}
+
+.test-credentials p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.test-credentials code {
+    display: inline-block;
+    background: white;
+    padding: 4px 10px;
+    margin: 3px;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #c4a4a4;
+    border: 1px solid #EBE5E2;
+}
+
+
+@media (max-width: 992px) {
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .connexion-card {
+        padding: 30px 25px;
+    }
+    
+    .services {
+        padding: 60px 0;
+    }
+    
+    .testimonials {
+        padding: 60px 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.user-info {
+    text-align: right;
+    line-height: 1.3;
+}
+
+.user-name {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: 0.03em;
+}
+
+.user-role {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    color: #c4a4a4;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.user-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #FDF9F7;
+    padding: 6px 12px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.user-dropdown-trigger:hover {
+    background: #f0e8e4;
+}
+
+.user-initial {
+    width: 28px;
+    height: 28px;
+    background: #c4a4a4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0;
+}
+
+.dropdown-arrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #1a1a1a;
+    transition: transform 0.3s;
+}
+
+.user-menu:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #EBE5E2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 100;
+}
+
+.user-menu:hover .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #1a1a1a;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+}
+
+.dropdown-link:hover {
+    background: #FDF9F7;
+    border-left-color: #c4a4a4;
+    color: #c4a4a4;
+    padding-left: 24px;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #EBE5E2;
+    margin: 6px 0;
+}
+
+.admin-link {
+    background: #faf5f5;
+    font-weight: 500;
+}
+
+.admin-link:hover {
+    background: #f5eded;
+}
+
+.logout-link {
+    color: #b5838d;
+}
+
+.logout-link:hover {
+    color: #b5838d;
+    background: #f8efef;
+}
+
+
+@media (max-width: 992px) {
+    .user-info {
+        display: none;
+    }
+    
+    .user-dropdown-trigger {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-info {
+        display: none;
+    }
+    
+    .user-dropdown-trigger {
+        padding: 5px 8px;
+    }
+    
+    .user-initial {
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+    }
+}
+
+
+.contact-page {
+    min-height: calc(100vh - 80px);
+    background: #FFFFFF;
+    padding: 120px 0 80px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+}
+
+.contact-header p {
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+
+.contact-form-container {
+    background: #FDF9F7;
+    padding: 45px;
+}
+
+.contact-form-container h2 {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.contact-form-container h2::after {
+    margin: 12px 0 0 0;
+    width: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 1px solid #EBE5E2;
+    background: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+    outline: none;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #c4a4a4;
+    box-shadow: 0 0 0 2px rgba(196,164,164,0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.btn-submit {
+    background: #1a1a1a;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: auto;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background: #c4a4a4;
+}
+
+
+.contact-infos-container {
+    background: #FFFFFF;
+    border: 1px solid #EBE5E2;
+    padding: 45px;
+}
+
+.contact-infos-container h2 {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 35px;
+    color: #1a1a1a;
+}
+
+.contact-infos-container h2::after {
+    margin: 12px 0 0 0;
+    width: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EBE5E2;
+}
+
+.info-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-icon {
+    min-width: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    color: #c4a4a4;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.info-content h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.info-content p {
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+
+.social-section {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #EBE5E2;
+}
+
+.social-section h3 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.social-grid {
+    display: flex;
+    gap: 25px;
+}
+
+.social-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+    padding: 5px 0;
+}
+
+.social-link:hover {
+    color: #c4a4a4;
+}
+
+
+.map-section {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #EBE5E2;
+}
+
+.map-section h3 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.map-frame {
+    width: 100%;
+    height: 220px;
+    border: none;
+    filter: grayscale(10%);
+}
+
+
+.contact-message-error {
+    background: #f8e8e8;
+    color: #b5838d;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+    border-left: 3px solid #b5838d;
+}
+
+.contact-message-success {
+    background: #e8f0e8;
+    color: #6b8c6b;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+    border-left: 3px solid #6b8c6b;
+}
+
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-page {
+        padding: 100px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-form-container,
+    .contact-infos-container {
+        padding: 30px 25px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .info-item {
+        gap: 15px;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+    
+    .info-icon {
+        min-width: 55px;
+        font-size: 0.6rem;
+    }
+    
+    .social-grid {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+
+.reservation-page {
+    min-height: calc(100vh - 80px);
+    background: #FFFFFF;
+    padding: 120px 0 80px;
+}
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reservation-header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.reservation-header p {
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reservation-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reservation-step {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.reservation-step.active {
+    display: block;
+}
+
+.step-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #c4a4a4;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+}
+
+.reservation-step h2 {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.reservation-step h2::after {
+    margin: 10px 0 0 0;
+}
+
+
+.prestations-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.categorie-bloc h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.prestations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.prestation-card {
+    background: #FDF9F7;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.prestation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.prestation-card.selected {
+    border-color: #c4a4a4;
+    background: white;
+}
+
+.prestation-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.prestation-desc {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.prestation-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+}
+
+.prestation-duree {
+    color: #888;
+}
+
+.prestation-prix {
+    color: #c4a4a4;
+    font-weight: 600;
+}
+
+
+.calendar-container {
+    background: #FDF9F7;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calendar-month-year {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 12px 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    border-radius: 50%;
+    cursor: default;
+}
+
+.calendar-day.disponible {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calendar-day.disponible:hover {
+    background: #c4a4a4;
+    color: white;
+}
+
+.calendar-day.selected {
+    background: #c4a4a4;
+    color: white;
+}
+
+.calendar-day.past,
+.calendar-day.ferme {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.calendar-day.disabled {
+    color: #eee;
+}
+
+
+.horaires-container h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.horaires-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.creneau-btn {
+    background: #FDF9F7;
+    border: 1px solid #EBE5E2;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.creneau-btn:hover {
+    border-color: #c4a4a4;
+}
+
+.creneau-btn.selected {
+    background: #c4a4a4;
+    color: white;
+    border-color: #c4a4a4;
+}
+
+.no-creneaux {
+    color: #b5838d;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-next-step,
+.btn-prev-step,
+.btn-submit-reservation {
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-next-step:disabled,
+.btn-prev-step:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-next-step:hover:not(:disabled),
+.btn-prev-step:hover:not(:disabled),
+.btn-submit-reservation:hover {
+    background: #c4a4a4;
+}
+
+.btn-prev-step {
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+}
+
+.btn-prev-step:hover {
+    background: #1a1a1a;
+    color: white;
+}
+
+.selected-info,
+.selected-date-info {
+    background: #FDF9F7;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+}
+
+.recap-commande {
+    background: #FDF9F7;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.recap-commande h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.recap-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #EBE5E2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+}
+
+.message-success {
+    background: #e8f0e8;
+    color: #6b8c6b;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-left: 3px solid #6b8c6b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.message-error {
+    background: #f8e8e8;
+    color: #b5838d;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-left: 3px solid #b5838d;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loading {
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation-page {
+        padding: 100px 0 60px;
+    }
+    
+    .reservation-header h1 {
+        font-size: 2rem;
+    }
+    
+    .prestations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-day {
+        padding: 8px 3px;
+        font-size: 0.75rem;
+    }
+    
+    .step-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-next-step,
+    .btn-prev-step {
+        width: 100%;
+        text-align: center;
+    }
+}

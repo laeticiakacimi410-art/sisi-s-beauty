@@ -1,0 +1,384 @@
+﻿
+
+.panier-page {
+    min-height: calc(100vh - 80px);
+    background: #FFFFFF;
+    padding: 120px 0 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.panier-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.panier-header h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.panier-header p {
+    color: #888;
+}
+
+
+.panier-vide {
+    text-align: center;
+    padding: 80px 20px;
+    background: #FDF9F7;
+    border-radius: 16px;
+}
+
+.empty-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.panier-vide h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.panier-vide p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.btn-continuer {
+    display: inline-block;
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.btn-continuer:hover {
+    background: #c4a4a4;
+}
+
+
+.panier-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.panier-produits {
+    flex: 2;
+    min-width: 300px;
+}
+
+.panier-table-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 2px solid #e5e5e5;
+    font-weight: 600;
+    color: #666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.panier-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+    gap: 15px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s;
+}
+
+
+.col-produit .produit-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.produit-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f5f0ed;
+}
+
+.produit-image-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #f5f0ed;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.produit-details h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.stock-warning {
+    font-size: 0.7rem;
+    color: #e74c3c;
+}
+
+
+.col-prix {
+    text-align: center;
+}
+
+.prix-unitaire {
+    font-weight: 500;
+    color: #c4a4a4;
+}
+
+
+.quantite-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.qte-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.qte-btn:hover {
+    background: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+.qte-input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.qte-input:focus {
+    outline: none;
+    border-color: #c4a4a4;
+}
+
+
+.col-total {
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.col-actions {
+    text-align: center;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.btn-remove:hover {
+    color: #e74c3c;
+}
+
+
+.panier-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.btn-continuer-shopping {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.btn-continuer-shopping:hover {
+    color: #c4a4a4;
+}
+
+.btn-vider {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.btn-vider:hover {
+    opacity: 0.7;
+}
+
+
+.panier-resume {
+    flex: 1;
+    min-width: 280px;
+    background: #FDF9F7;
+    padding: 25px;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.panier-resume h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.resume-ligne {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #666;
+}
+
+.resume-livraison-offerte {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.resume-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin-top: 10px;
+    border-top: 2px solid #e5e5e5;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.btn-valider {
+    display: block;
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-valider:hover {
+    background: #c4a4a4;
+}
+
+.payment-info {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: 15px;
+}
+
+
+@media (max-width: 992px) {
+    .panier-table-header {
+        display: none;
+    }
+    
+    .panier-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .col-produit .produit-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .col-prix, .col-quantite, .col-total, .col-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+    
+    .col-prix::before {
+        content: "Prix :";
+        font-weight: 600;
+        color: #666;
+    }
+    
+    .col-quantite::before {
+        content: "Quantité :";
+        font-weight: 600;
+        color: #666;
+    }
+    
+    .col-total::before {
+        content: "Total :";
+        font-weight: 600;
+        color: #666;
+    }
+    
+    .quantite-control {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .panier-page {
+        padding: 100px 0 60px;
+    }
+    
+    .panier-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .panier-container {
+        flex-direction: column;
+    }
+    
+    .panier-resume {
+        position: static;
+    }
+}

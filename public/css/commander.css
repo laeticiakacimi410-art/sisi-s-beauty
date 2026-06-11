@@ -1,0 +1,466 @@
+﻿
+.commander-page {
+    min-height: calc(100vh - 80px);
+    background: #FFFFFF;
+    padding: 120px 0 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.commander-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.commander-header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.steps-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    color: #999;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: 600;
+}
+
+.step.active .step-number {
+    background: #1a1a1a;
+    color: white;
+}
+
+.step.completed .step-number {
+    background: #27ae60;
+    color: white;
+}
+
+.step-label {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.step.active .step-label {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background: #f0f0f0;
+    margin: 0 10px;
+}
+
+.step-line.active {
+    background: #27ae60;
+}
+
+
+.commander-layout {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.commander-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.commander-sidebar {
+    flex: 1;
+    min-width: 280px;
+}
+
+
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.form-card {
+    background: #FDF9F7;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.form-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c4a4a4;
+}
+
+
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option-card:hover {
+    border-color: #c4a4a4;
+    background: #fff;
+}
+
+.option-card input[type="radio"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.option-content {
+    flex: 1;
+}
+
+.option-content strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.option-content .price {
+    float: right;
+    color: #c4a4a4;
+    font-weight: 600;
+}
+
+.option-content small {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary, .btn-confirm {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #1a1a1a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #c4a4a4;
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+.btn-confirm {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background: #219a52;
+}
+
+
+.recap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.recap-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.recap-box h3 {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: #c4a4a4;
+}
+
+.recap-box p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.recap-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recap-table th,
+.recap-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.recap-table th {
+    background: #fafafa;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.recap-totaux {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    text-align: right;
+}
+
+.total-line {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 5px 0;
+}
+
+.grand-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #1a1a1a;
+}
+
+
+.cart-summary {
+    background: #FDF9F7;
+    padding: 25px;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+}
+
+.cart-summary h3 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.item-info {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.item-name {
+    font-size: 0.85rem;
+}
+
+.item-qty {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #c4a4a4;
+}
+
+.cart-totals {
+    padding-top: 15px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.cart-totals .total-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    text-align: left;
+}
+
+
+.confirmation-card {
+    text-align: center;
+    padding: 60px 40px;
+    background: #FDF9F7;
+    border-radius: 12px;
+}
+
+.confirmation-icon {
+    width: 80px;
+    height: 80px;
+    background: #27ae60;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 20px;
+}
+
+.commande-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.confirmation-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.message-error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ffcdd2;
+}
+
+
+@media (max-width: 768px) {
+    .commander-page {
+        padding: 100px 0 60px;
+    }
+    
+    .steps-progress {
+        flex-wrap: wrap;
+    }
+    
+    .step-line {
+        display: none;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .recap-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .confirmation-actions {
+        flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary, .btn-confirm {
+        width: 100%;
+        text-align: center;
+    }
+}
