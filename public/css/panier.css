@@ -382,3 +382,59 @@
         position: static;
     }
 }
+/* Responsive panier */
+@media (max-width: 768px) {
+    .panier-page {
+        padding: 100px 0 60px;
+    }
+    
+    .panier-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .panier-table-header {
+        display: none;
+    }
+    
+    .panier-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .col-produit .produit-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .col-prix::before {
+        content: "Prix :";
+        font-weight: 600;
+    }
+    
+    .col-quantite::before {
+        content: "Quantité :";
+        font-weight: 600;
+    }
+    
+    .col-total::before {
+        content: "Total :";
+        font-weight: 600;
+    }
+    
+    .col-prix, .col-quantite, .col-total, .col-actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+    
+    .panier-container {
+        flex-direction: column;
+    }
+    
+    .panier-resume {
+        position: static;
+    }
+}

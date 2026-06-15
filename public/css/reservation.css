@@ -403,3 +403,38 @@
         font-size: 1.2rem;
     }
 }
+/* Responsive réservation */
+@media (max-width: 768px) {
+    .reservation-page {
+        padding: 100px 0 60px;
+    }
+    
+    .reservation-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .reservation-container {
+        padding: 20px;
+    }
+    
+    .prestations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .step-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-next-step,
+    .btn-prev-step,
+    .btn-submit-reservation {
+        width: 100%;
+        text-align: center;
+    }
+}
