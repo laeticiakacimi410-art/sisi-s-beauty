@@ -145,29 +145,31 @@ function genererCalendrier() {
         monthYearSpan.textContent = `${monthNames[month]} ${year}`;
     }
     
-    let calendarHtml = '';
-    
-    for (let i = 0; i < startDay; i++) {
-        calendarHtml += '<div class="calendar-day disabled"></div>';
-    }
-    
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    
-    for (let day = 1; day <= daysInMonth; day++) {
-        const dateObj = new Date(year, month, day);
-        const dateStr = dateObj.toISOString().split('T')[0];
-        const isPast = dateObj < today;
-        
-        let classes = 'calendar-day';
-        if (isPast) classes += ' past';
-        
-        calendarHtml += `<div class="${classes}" data-date="${dateStr}">${day}</div>`;
-    }
-    
     const calendarDays = document.getElementById('calendar-days');
     if (calendarDays) {
-        calendarDays.innerHTML = calendarHtml;
+        calendarDays.textContent = '';
+        
+        for (let i = 0; i < startDay; i++) {
+            const disabledDay = document.createElement('div');
+            disabledDay.className = 'calendar-day disabled';
+            calendarDays.appendChild(disabledDay);
+        }
+        
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dateObj = new Date(year, month, day);
+            const dateStr = dateObj.toISOString().split('T')[0];
+            const isPast = dateObj < today;
+            
+            const dayDiv = document.createElement('div');
+            dayDiv.className = 'calendar-day';
+            if (isPast) dayDiv.classList.add('past');
+            dayDiv.setAttribute('data-date', dateStr);
+            dayDiv.textContent = day;
+            calendarDays.appendChild(dayDiv);
+        }
     }
     
     
@@ -186,19 +188,27 @@ async function genererCreneaux() {
     const horairesGrid = document.getElementById('horaires-grid');
     if (!horairesGrid) return;
     
-    horairesGrid.innerHTML = '<p class="loading">Chargement des créneaux...</p>';
+    horairesGrid.textContent = '';
+    const loadingP = document.createElement('p');
+    loadingP.className = 'loading';
+    loadingP.textContent = 'Chargement des créneaux...';
+    horairesGrid.appendChild(loadingP);
     
     try {
         const response = await fetch(`/api/slots.php?prestation_id=${selectedPrestation.id}&date=${selectedDate}`);
         const data = await response.json();
         
         if (data.error) {
-            horairesGrid.innerHTML = `<p class="no-creneaux">${data.error}</p>`;
+            horairesGrid.textContent = '';
+            const errorP = document.createElement('p');
+            errorP.className = 'no-creneaux';
+            errorP.textContent = data.error;
+            horairesGrid.appendChild(errorP);
             return;
         }
         
         if (data.slots && data.slots.length > 0) {
-            horairesGrid.innerHTML = '';
+            horairesGrid.textContent = '';
             data.slots.forEach(slot => {
                 const btn = document.createElement('button');
                 btn.type = 'button';
@@ -214,10 +224,18 @@ async function genererCreneaux() {
                 horairesGrid.appendChild(btn);
             });
         } else {
-            horairesGrid.innerHTML = '<p class="no-creneaux">Aucun créneau disponible pour cette date.</p>';
+            horairesGrid.textContent = '';
+            const noCrenP = document.createElement('p');
+            noCrenP.className = 'no-creneaux';
+            noCrenP.textContent = 'Aucun créneau disponible pour cette date.';
+            horairesGrid.appendChild(noCrenP);
         }
     } catch (error) {
         console.error('Erreur:', error);
-        horairesGrid.innerHTML = '<p class="no-creneaux">Erreur lors du chargement des créneaux.</p>';
+        horairesGrid.textContent = '';
+        const errP = document.createElement('p');
+        errP.className = 'no-creneaux';
+        errP.textContent = 'Erreur lors du chargement des créneaux.';
+        horairesGrid.appendChild(errP);
     }
 }

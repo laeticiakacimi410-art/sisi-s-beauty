@@ -35,12 +35,17 @@ function viewMessage(id) {
     
     currentMessageId = id;
     
-    document.getElementById('viewSender').innerHTML = `${msg.prenom} ${msg.nom}`;
-    document.getElementById('viewEmail').innerHTML = msg.email;
-    document.getElementById('viewPhone').innerHTML = msg.telephone || 'Non fourni';
-    document.getElementById('viewSubject').innerHTML = msg.sujet;
-    document.getElementById('viewDate').innerHTML = msg.date;
-    document.getElementById('viewMessage').innerHTML = msg.message.replace(/\n/g, '<br>');
+    document.getElementById('viewSender').textContent = `${msg.prenom} ${msg.nom}`;
+    document.getElementById('viewEmail').textContent = msg.email;
+    document.getElementById('viewPhone').textContent = msg.telephone || 'Non fourni';
+    document.getElementById('viewSubject').textContent = msg.sujet;
+    document.getElementById('viewDate').textContent = msg.date;
+    const viewMessageEl = document.getElementById('viewMessage');
+    viewMessageEl.textContent = '';
+    msg.message.split('\n').forEach((line, index) => {
+        if (index > 0) viewMessageEl.appendChild(document.createElement('br'));
+        viewMessageEl.appendChild(document.createTextNode(line));
+    });
     
     document.getElementById('viewModal').classList.add('active');
     
@@ -71,8 +76,8 @@ function replyMessage(id) {
     if (!msg) return;
     
     document.getElementById('replyId').value = id;
-    document.getElementById('replyTo').innerHTML = `${msg.prenom} ${msg.nom} &lt;${msg.email}&gt;`;
-    document.getElementById('replyOriginal').innerHTML = msg.message;
+    document.getElementById('replyTo').textContent = `${msg.prenom} ${msg.nom} <${msg.email}>`;
+    document.getElementById('replyOriginal').textContent = msg.message;
     document.getElementById('replyMessage').value = '';
     
     document.getElementById('replyModal').classList.add('active');
@@ -114,7 +119,7 @@ function initFilters() {
             if (visible === 0 && !emptyMsg) {
                 const div = document.createElement('div');
                 div.className = 'empty-state filter-empty';
-                div.innerHTML = '<div class="empty-icon">🔍</div><p>Aucun message</p>';
+                div.textContent = 'Aucun message';
                 document.querySelector('.messages-list').appendChild(div);
             } else if (visible > 0 && emptyMsg) {
                 emptyMsg.remove();

@@ -138,14 +138,25 @@
     
     function showLoadingState() {
         submitBtn.classList.add('loading');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span>⏳</span> Envoi en cours...';
+        const originalContent = [];
+        Array.from(submitBtn.childNodes).forEach(node => {
+            originalContent.push(node.cloneNode(true));
+        });
         
+        submitBtn.textContent = '';
+        const span = document.createElement('span');
+        span.textContent = '⏳';
+        submitBtn.appendChild(span);
+        const text = document.createTextNode(' Envoi en cours...');
+        submitBtn.appendChild(text);
         
         setTimeout(() => {
             if (submitBtn.classList.contains('loading')) {
                 submitBtn.classList.remove('loading');
-                submitBtn.innerHTML = originalText;
+                submitBtn.textContent = '';
+                originalContent.forEach(node => {
+                    submitBtn.appendChild(node);
+                });
             }
         }, 3000);
     }
